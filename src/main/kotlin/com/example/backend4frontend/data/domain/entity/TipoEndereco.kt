@@ -1,4 +1,4 @@
-package br.mil.fab.compraerapitreinamento.compraerapitreinamento.entity;
+package com.example.backend4frontend.data.domain.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
