@@ -1,4 +1,4 @@
-package br.mil.fab.compraerapitreinamento.compraerapitreinamento.entity;
+package com.example.backend4frontend.data.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
