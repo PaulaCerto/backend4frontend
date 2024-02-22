@@ -11,18 +11,18 @@ import java.io.Serializable;
 @Table(name="CIDADE")
 @Data
 @Builder
-public class Cidade implements Serializable {
+class Cidade implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_CIDADE", nullable = false)
-    private Long idCidade;
+    val idCidade: Long = 0
 
     @Column(name="NM_CIDADE", nullable = false)
-    private String nmCidade;
+    val nmCidade: String = ""
 
     @Column(name="SG_CIDADE", nullable = false)
-    private String sgCidade;
+    val sgCidade: String = ""
 
     public Cidade(Long idCidade, String nmCidade, String sgCidade) {
         this.idCidade = idCidade;
