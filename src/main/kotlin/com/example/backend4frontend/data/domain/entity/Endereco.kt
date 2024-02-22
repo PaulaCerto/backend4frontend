@@ -20,22 +20,22 @@ public class Endereco {
     val id: Long = 0
 
     @Column(name="LOGRADOURO", nullable = false)
-    val logradouro: String = 0
+    val logradouro: String = ""
 
     @Column(name = "NUMERO", nullable = false)
-    val numero: String = 0
+    val numero: String = ""
 
     @Column(name = "COMPLEMENTO", nullable = false)
-    val complemento: String = 0
+    val complemento: String = ""
 
     @Column(name = "BAIRRO", nullable = false)
-    val bairro: String = 0
+    val bairro: String = ""
 
     @Column(name = "CIDADE", nullable = false)
-    val cidade: String = 0
+    val cidade: String = ""
 
     @Column(name = "ESTADO", nullable = false)
-    val estado: String = 0
+    val estado: String = ""
 
     @ManyToOne
     @JoinTable(
