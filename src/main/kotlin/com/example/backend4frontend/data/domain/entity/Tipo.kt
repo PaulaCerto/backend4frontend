@@ -17,14 +17,14 @@ public class Tipo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_TIPO", nullable = false)
-    private Long id;
+    val id: Long = 0
 
     @Column(name="NM_TIPO", nullable = false)
-    private String nmTipo;
+    val nmTipo: String = ""
 
     @JsonIgnore
     @OneToMany(mappedBy = "tipo", cascade = CascadeType.ALL)
-    private List<Endereco> listEndereco;
+    val listEndereco: List<Endereco> = new ArrayList<>()
 
     public Tipo(Long id, String nmTipo, List<Endereco> listEndereco) {
         this.id = id;
