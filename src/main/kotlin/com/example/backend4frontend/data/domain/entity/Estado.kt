@@ -19,10 +19,10 @@ public class Estado implements Serializable {
     val idEstado: Long = 0
 
     @Column(name="NM_ESTADO", nullable = false)
-    val nmEstado: String = 0
+    val nmEstado: String = ""
 
     @Column(name="SG_ESTADO", nullable = false)
-    val sgEstado: String = 0
+    val sgEstado: String = ""
 
     public Estado(Long idEstado, String nmEstado, String sgEstado) {
         this.idEstado = idEstado;
