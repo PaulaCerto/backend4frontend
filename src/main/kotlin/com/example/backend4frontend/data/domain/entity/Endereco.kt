@@ -17,36 +17,36 @@ public class Endereco {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_ENDERECO", nullable = false)
-    private Long id;
+    val id: Long = 0
 
     @Column(name="LOGRADOURO", nullable = false)
-    private String logradouro;
+    val logradouro: String = 0
 
     @Column(name = "NUMERO", nullable = false)
-    private String numero;
+    val numero: String = 0
 
     @Column(name = "COMPLEMENTO", nullable = false)
-    private String complemento;
+    val complemento: String = 0
 
     @Column(name = "BAIRRO", nullable = false)
-    private String bairro;
+    val bairro: String = 0
 
     @Column(name = "CIDADE", nullable = false)
-    private String cidade;
+    val cidade: String = 0
 
     @Column(name = "ESTADO", nullable = false)
-    private String estado;
+    val estado: String = 0
 
     @ManyToOne
     @JoinTable(
             name = "TIPO_ENDERECO",
             joinColumns = @JoinColumn(name = "ID_ENDERECO"),
             inverseJoinColumns = @JoinColumn(name = "ID_TIPO"))
-    private Tipo tipo;
+    val tipo: Tipo = new Tipo()
 
     @JsonIgnore
     @ManyToMany(mappedBy = "listEndereco", cascade = CascadeType.ALL)
-    private List<Pessoa> idPessoa;
+    val idPessoa: List<Pessoa> = new ArrayList<>()
 
     public Endereco(Long id, String logradouro, String numero, String complemento, String bairro, String cidade, String estado, Tipo tipo, List<Pessoa> idPessoa) {
         this.id = id;
