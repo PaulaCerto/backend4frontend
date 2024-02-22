@@ -18,10 +18,10 @@ public class TipoEndereco implements Serializable {
 
     @Id
     @Column(name="ID_ENDERECO", nullable = false)
-    private Long idEndereco;
+    val idEndereco: Long = 0
 
     @Id
     @Column(name="ID_TIPO", nullable = false)
-    private Long idTipo;
+    val idTipo: Long = 0
 
 }
