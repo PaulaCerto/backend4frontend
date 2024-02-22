@@ -15,26 +15,26 @@ public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_PESSOA", nullable = false)
-    private Long id;
+    val id: Long = 0
 
     @Column(name="NAME", length = 50, nullable = false)
-    private String nome;
+    val nome: String = ""
 
     @Column(name = "IDADE", length = 3, nullable = false)
-    private Integer nrIdade;
+    val nrIdade: Integer = 0
 
     @Column(name = "CPF", length = 11, nullable = false)
-    private String nrCpf;
+    val nrCpf: String = ""
 
     @Column(name = "TELEFONE", length = 11, nullable = false)
-    private String nrTelefone;
+    val nrTelefone: String = ""
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "ENDERECO_PESSOA",
             joinColumns = @JoinColumn(name = "ID_PESSOA"),
             inverseJoinColumns = @JoinColumn(name = "ID_ENDERECO"))
-    private List<Endereco> listEndereco;
+    val listEndereco: List<Endereco> = new ArrayList<>()
 
     public Pessoa(Long id, String nome, Integer nrIdade, String nrCpf, String nrTelefone, List<Endereco> listEndereco) {
         this.id = id;
