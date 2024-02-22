@@ -16,13 +16,13 @@ public class Estado implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_ESTADO", nullable = false)
-    private Long idEstado;
+    val idEstado: Long = 0
 
     @Column(name="NM_ESTADO", nullable = false)
-    private String nmEstado;
+    val nmEstado: String = 0
 
     @Column(name="SG_ESTADO", nullable = false)
-    private String sgEstado;
+    val sgEstado: String = 0
 
     public Estado(Long idEstado, String nmEstado, String sgEstado) {
         this.idEstado = idEstado;
